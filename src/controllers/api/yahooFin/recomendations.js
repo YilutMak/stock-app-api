@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const controllersApiMyStocksRecomendations = async (req, res) => {
   try {
-    const { params: { symbol: ticker } } = req
+    // const { params: { symbol: ticker } } = req
     const resp = await axios({
       method: 'GET',
       url: 'https://yh-finance.p.rapidapi.com/stock/v2/get-recommendations',

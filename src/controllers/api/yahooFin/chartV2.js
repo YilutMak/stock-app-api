@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const controllersApiMyStocksChartV2 = async (req, res) => {
   try {
-    // const { params: { interval: time, symbol: ticker, range: duration, region: country, period1: period1, period 2 } } = req
+    // const { params: { interval: time, symbol: ticker, range: duration, region: country, period1: period1, period2: period2 } } = req
     const resp = await axios({
       method: 'GET',
       url: 'https://yh-finance.p.rapidapi.com/stock/v2/get-chart',
