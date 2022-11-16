@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import authenticateUser from './_middlewares/authenticate-user.js'
+// import authenticateUser from './_middlewares/authenticate-user.js'
 
 const router = Router()
 
@@ -11,11 +11,14 @@ router.post('/api/auth/login', (await import('./controllers/api/auth/login.js'))
 router.delete('/api/auth/logout', (await import('./controllers/api/auth/logout.js')).default)
 
 // API | MY PROFILE | AUTH REQUIRED
-router.get('/api/my/profile', authenticateUser('json'), (await import('./controllers/api/my/profile/show.js')).default)
+// router.get('/api/my/profile', authenticateUser('json'), (await import('./controllers/api/my/profile/show.js')).default)
+router.get('/api/my/profile', (await import('./controllers/api/my/profile/show.js')).default)
 
 // API | MY STOCKS | AUTH REQUIRED
 // router.post('/api/my/stock', authenticateUser('json'), (await import('./controllers/api/my/stocks/create.js')).default)
+router.post('/api/my/stock', (await import('./controllers/api/my/stocks/create.js')).default)
 // router.delete('/api/my/stock/:id', authenticateUser('json'), (await import('./controllers/api/my/stocks/destroy.js')).default)
+router.delete('/api/my/stock/:id', (await import('./controllers/api/my/stocks/destroy.js')).default)
 
 // API | STOCKS
 router.get('/api/stock/summary', (await import('./controllers/api/yahooFin/summary.js')).default)

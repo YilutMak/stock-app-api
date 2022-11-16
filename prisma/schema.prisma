@@ -11,8 +11,9 @@ datasource db {
 }
 
 model Stocks {
-  id     Int   @id @default(autoincrement())
-  user   User? @relation(fields: [userId], references: [id])
+  id     Int    @id @default(autoincrement())
+  symbol String
+  user   User?  @relation(fields: [userId], references: [id])
   userId Int?
 }
 
