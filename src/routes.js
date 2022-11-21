@@ -28,5 +28,8 @@ router.get('/api/stock/statisticsv3', (await import('./controllers/api/yahooFin/
 router.get('/api/stock/historicaldata', (await import('./controllers/api/yahooFin/historicalData.js')).default)
 router.get('/api/stock/profile', (await import('./controllers/api/yahooFin/profile.js')).default)
 router.get('/api/stock/financials', (await import('./controllers/api/yahooFin/financials.js')).default)
+router.get('/api/stock/spark', (await import('./controllers/api/yahooFin/spark.js')).default)
+router.get('/api/stock/movers', (await import('./controllers/api/yahooFin/movers.js')).default)
+router.get('/api/stock/quotes', (await import('./controllers/api/yahooFin/quotes.js')).default)
 
 export default router

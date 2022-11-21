@@ -15,11 +15,13 @@ model Stocks {
   symbol String
   user   User?  @relation(fields: [userId], references: [id])
   userId Int?
+
+  @@unique([userId, symbol])
 }
 
 model User {
   id           Int      @id @default(autoincrement())
-  usernamegit  String   @unique
+  username     String   @unique
   email        String   @unique
   passwordHash String
   stocks       Stocks[]

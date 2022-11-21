@@ -10,12 +10,12 @@ const controllersApiMyStocksIndex = async (req, res) => {
       userId
     }
 
-    const foundMyWishlists = await prisma.wishlist.findMany({
+    const foundMyStocks = await prisma.stocks.findMany({
       where
     })
 
     return res.status(200).json({
-      wishlists: foundMyWishlists
+      stocks: foundMyStocks
     })
   } catch (err) {
     return handleErrors(res, err)

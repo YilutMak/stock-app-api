@@ -2,7 +2,8 @@ import prisma from '../../../_helpers/prisma.js'
 import handleErrors from '../../../_helpers/handle-errors.js'
 import checkOwnership from './_check-ownership.js'
 
-const controllersApiStockssDestroy = async (req, res) => {
+const controllersApiStocksDestroy = async (req, res) => {
+  console.log('params:', req.params)
   try {
     const { params: { id } } = req
     const deletedStocks = await prisma.stocks.delete({ where: { id: Number(id) } })
@@ -14,5 +15,5 @@ const controllersApiStockssDestroy = async (req, res) => {
 
 export default [
   checkOwnership,
-  controllersApiStockssDestroy
+  controllersApiStocksDestroy
 ]
