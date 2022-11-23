@@ -9,7 +9,7 @@ const controllersApiMyStocksRecomendations = async (req, res) => {
       url: 'https://yh-finance.p.rapidapi.com/stock/v2/get-recommendations',
       params: symbol,
       headers: {
-        'X-RapidAPI-Key': '6013a6fd35mshd8d19441c8b4196p16fa3ajsn6293191261ca',
+        'X-RapidAPI-Key': 'c4cdbbec9amshccc3804d05f4de5p15652bjsn1dc0afd1c23a',
         'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
       }
     })
