@@ -16,6 +16,7 @@ const controllersApiMyStocksCreate = async (req, res) => {
     const newStock = await prisma.stocks.create({ data: { ...verifiedData, userId } })
     return res.status(201).json(newStock)
   } catch (err) {
+    console.error(err)
     return handleErrors(res, err)
   }
 }
