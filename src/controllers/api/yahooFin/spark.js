@@ -13,10 +13,10 @@ const controllersApiMyStocksSpark = async (req, res) => {
         'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
       }
     })
-    // console.log('spark data:', resp.data)
+    console.log('spark data:', resp.data)
     return res.status(201).json(resp.data)
   } catch (err) {
-    // console.log('spark data:', err.response.data)
+    console.log('spark data:', err.response.data)
     return err.response.data
   }
 }
