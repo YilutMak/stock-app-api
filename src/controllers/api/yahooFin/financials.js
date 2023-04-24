@@ -8,7 +8,7 @@ const controllersApiMyStocksFinancials = async (req, res) => {
       url: 'https://yh-finance.p.rapidapi.com/stock/v2/get-financials',
       params: { symbol: 'AMD', region: 'US' },
       headers: {
-        'X-RapidAPI-Key': '3298c261f7msh8b282be2fc60f8ap172f0bjsnae2df1903e8a',
+        'X-RapidAPI-Key': '0244c9b7a1mshd9fd55acbf01841p19a070jsn21d39fe1b23a',
         'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
       }
     })
