@@ -10,7 +10,7 @@ const controllersApiMyStocksStatisticsV3 = async (req, res) => {
         symbol: 'AMD'
       },
       headers: {
-        'X-RapidAPI-Key': '3298c261f7msh8b282be2fc60f8ap172f0bjsnae2df1903e8a',
+        'X-RapidAPI-Key': '0244c9b7a1mshd9fd55acbf01841p19a070jsn21d39fe1b23a',
         'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
       }
     })
