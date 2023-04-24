@@ -10,7 +10,7 @@ const controllersApiMyStocksSummary = async (req, res) => {
       url: 'https://yh-finance.p.rapidapi.com/stock/v2/get-summary',
       params: parameters,
       headers: {
-        'X-RapidAPI-Key': 'c4cdbbec9amshccc3804d05f4de5p15652bjsn1dc0afd1c23a',
+        'X-RapidAPI-Key': '0244c9b7a1mshd9fd55acbf01841p19a070jsn21d39fe1b23a',
         'X-RapidAPI-Host': 'yh-finance.p.rapidapi.com'
       }
     })
